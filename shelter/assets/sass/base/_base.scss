@@ -1,0 +1,32 @@
+* {
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+  @include font("Arial", sans-serif, 15px, 24px);
+}
+
+h1 {
+  @include font("Georgia", serif, 32px, 35.2px);
+  letter-spacing: 2px;
+  color: $color-primary;
+} 
+
+h2 {
+  @include font("Georgia", serif, 44px, 57.2px);
+}
+
+h3 {
+  @include font("Georgia", serif, 35px, 45.5px);
+}
