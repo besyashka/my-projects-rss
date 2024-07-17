@@ -1,0 +1,13 @@
+.navigation_list {
+  @include flex($justify: flex-end);
+  list-style: none;
+}
+
+.navigation_link {
+  padding: 0 0 0 36px;
+  color: $color-text-light;
+  transition: color 0.3s;
+  &:hover {
+    color: $color-link-light;
+  }
+}

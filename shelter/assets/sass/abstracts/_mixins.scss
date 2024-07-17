@@ -4,3 +4,10 @@
   line-height: $height;
   font-weight: $weight;
 }
+
+@mixin flex ($display: flex, $justify, $align: center, $wrap: nowrap){
+  display: $display;
+  justify-content: $justify;
+  align-items: $align;
+  flex-wrap: $wrap;
+}

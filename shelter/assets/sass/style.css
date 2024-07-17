@@ -1,6 +1,5 @@
 * {
   box-sizing: border-box;
-  scroll-behavior: smooth;
 }
 
 html {
@@ -25,6 +24,7 @@ h1 {
   font-size: 32px;
   line-height: 35.2px;
   font-weight: 400;
+  margin: 5px 0;
   letter-spacing: 2px;
   color: #F1CDB3;
 }
@@ -56,15 +56,70 @@ h3 {
   text-decoration: none;
 }
 
+.container {
+  max-width: 1280px;
+  padding: 0 40px;
+  margin: 0 auto;
+}
+
+.header_container {
+  padding: 25px 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: nowrap;
+}
+
+span {
+  font-size: 13px;
+  line-height: 14.95px;
+  letter-spacing: 1.3px;
+  padding-left: 4px;
+}
+
+footer,
+.header,
+.not_only {
+  background: url(../../images/background/noise_transparent.png), linear-gradient(0deg, #211F20, #211F20), radial-gradient(100% 215.42% at 0% 0%, #5B483A 0%, #262425 100%);
+}
+
+.navigation_list {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  flex-wrap: nowrap;
+  list-style: none;
+}
+
+.navigation_link {
+  padding: 0 0 0 36px;
+  color: #CDCDCD;
+  transition: color 0.3s;
+}
+.navigation_link:hover {
+  color: #FAFAFA;
+}
+
 .button {
   padding: 15px 45px;
   font-family: "Georgia", serif;
   font-size: 17px;
   line-height: 21.1px;
   font-weight: 400;
+  letter-spacing: 1px;
   color: #292929;
+  background: #FFFFFF;
   border: 2px solid #F1CDB3;
   border-radius: 100px;
+}
+
+.button_colored {
+  background: #F1CDB3;
+  border: 0px solid #F1CDB3;
+}
+
+.burger {
+  display: none;
 }
 
 /*# sourceMappingURL=style.css.map */
