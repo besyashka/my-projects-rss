@@ -100,6 +100,33 @@ footer,
   color: #FAFAFA;
 }
 
+.layout-2-column {
+  display: flex;
+}
+
+.not_only {
+  padding: 61px 0 0;
+}
+
+.not_only_container {
+  justify-content: space-between;
+}
+
+.not_only_content {
+  max-width: 460px;
+  padding-top: 128px;
+}
+
+.not_only_title {
+  max-width: 310px;
+  color: #FFFFFF;
+}
+
+.not_only_text {
+  margin: 40px 0 57px;
+  color: #CDCDCD;
+}
+
 .button {
   padding: 15px 45px;
   font-family: "Georgia", serif;
