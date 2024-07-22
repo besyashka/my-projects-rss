@@ -1,5 +1,6 @@
 * {
   box-sizing: border-box;
+  margin: 0;
 }
 
 html {
@@ -11,7 +12,6 @@ body {
   flex-direction: column;
   justify-content: space-between;
   min-height: 100vh;
-  margin: 0;
   padding: 0;
   font-family: "Arial", sans-serif;
   font-size: 15px;
@@ -34,6 +34,7 @@ h2 {
   font-size: 44px;
   line-height: 57.2px;
   font-weight: 400;
+  padding: 80px 0 0;
 }
 
 h3 {
@@ -41,6 +42,7 @@ h3 {
   font-size: 35px;
   line-height: 45.5px;
   font-weight: 400;
+  letter-spacing: 2.1px;
 }
 
 @font-face {
@@ -70,7 +72,7 @@ h3 {
   flex-wrap: nowrap;
 }
 
-span {
+.logo_text {
   font-size: 13px;
   line-height: 14.95px;
   letter-spacing: 1.3px;
@@ -114,7 +116,7 @@ footer,
 
 .not_only_content {
   max-width: 460px;
-  padding-top: 128px;
+  padding-top: 84px;
 }
 
 .not_only_title {
@@ -125,6 +127,30 @@ footer,
 .not_only_text {
   margin: 40px 0 57px;
   color: #CDCDCD;
+}
+
+.about {
+  padding: 80px 0 100px;
+}
+
+.about_container {
+  justify-content: center;
+}
+
+.about_img {
+  margin-right: 120px;
+}
+
+.about_content {
+  max-width: 430px;
+}
+
+.about_title {
+  padding: 14px 0 0;
+}
+
+.about_text {
+  margin: 25px 0 0;
 }
 
 .button {
