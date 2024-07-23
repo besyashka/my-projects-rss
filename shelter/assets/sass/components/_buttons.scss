@@ -1,4 +1,5 @@
 .button {
+  display: inline-block;
   padding: 15px 45px;
   @include font("Georgia", serif, 17px, 21.1px);
   letter-spacing: 1px;
@@ -11,4 +12,11 @@
 .button_colored {
   background: $color-primary;
   border: 0px solid $color-primary;
+}
+
+.button_control {
+  width: 52px;
+  height: 52px;
+  border: 2px solid $color-primary;
+  border-radius: 100px;
 }
