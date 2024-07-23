@@ -319,6 +319,7 @@ footer,
 .text_xs {
   width: 380px;
   font-size: 12px;
+  font-style: italic;
   line-height: 18px;
   color: #B2B2B2;
 }
