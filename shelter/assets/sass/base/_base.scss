@@ -32,3 +32,8 @@ h3 {
   @include font("Georgia", serif, 35px, 45.5px);
   letter-spacing: 2.1px;
 }
+
+h4 {
+  @include font("Georgia", serif, 20px, 23px);
+  letter-spacing: 1.1px;
+}

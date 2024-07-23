@@ -1,0 +1,17 @@
+.help_list {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 53px 120px;
+  margin: 58px 0 0;
+}
+
+.item_icon {
+  width: 60px;
+  height: 60px;
+  margin: 0 0 25px;
+}
+
+.help_item {
+  text-align: center;
+}

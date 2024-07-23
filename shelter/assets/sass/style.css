@@ -45,6 +45,14 @@ h3 {
   letter-spacing: 2.1px;
 }
 
+h4 {
+  font-family: "Georgia", serif;
+  font-size: 20px;
+  line-height: 23px;
+  font-weight: 400;
+  letter-spacing: 1.1px;
+}
+
 @font-face {
   font-family: "Arial";
   src: url(../../fonts/arial/);
@@ -173,6 +181,24 @@ footer,
   letter-spacing: 1.5px;
 }
 
+.help_list {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 53px 120px;
+  margin: 58px 0 0;
+}
+
+.item_icon {
+  width: 60px;
+  height: 60px;
+  margin: 0 0 25px;
+}
+
+.help_item {
+  text-align: center;
+}
+
 .button {
   display: inline-block;
   padding: 15px 45px;
@@ -196,7 +222,7 @@ footer,
   width: 52px;
   height: 52px;
   border: 2px solid #F1CDB3;
-  border-radius: 100%;
+  border-radius: 100px;
 }
 
 .burger {
