@@ -1,0 +1,39 @@
+.footer_container {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 40px;
+}
+
+.footer_column {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  max-width: 302px;
+  height: 234px;
+  margin-top: 19px;
+}
+
+.column-1 {
+  max-width: 280px;
+}
+
+.footer_title {
+  color: $color-title-light;
+}
+
+.footer_link {
+  display: flex;
+  align-items: center;
+}
+
+.footer_icon {
+  margin: 0 20px 0 0;
+}
+
+.footer_link_text {
+  color: $color-primary;
+}
+
+.footer_img {
+  height: 310px;
+}
