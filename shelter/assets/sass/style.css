@@ -43,6 +43,7 @@ h3 {
   line-height: 45.5px;
   font-weight: 400;
   letter-spacing: 2.1px;
+  color: #545454;
 }
 
 h4 {
@@ -51,6 +52,15 @@ h4 {
   line-height: 23px;
   font-weight: 400;
   letter-spacing: 1.1px;
+  color: #545454;
+}
+
+h5 {
+  font-family: "Georgia", serif;
+  font-size: 15px;
+  line-height: 16.5px;
+  font-weight: 400;
+  letter-spacing: 0.9px;
 }
 
 @font-face {
@@ -179,6 +189,7 @@ footer,
   font-size: 20px;
   line-height: 22.72px;
   letter-spacing: 1.5px;
+  color: #545454;
 }
 
 .help_list {
@@ -197,6 +208,40 @@ footer,
 
 .help_item {
   text-align: center;
+}
+
+.donation {
+  color: #545454;
+  background: #F6F6F6;
+}
+
+.donation_container {
+  justify-content: center;
+  align-items: center;
+  padding: 80px 0 0;
+}
+
+.donation_img {
+  height: 261px;
+  margin: 0 30px 0 0;
+}
+
+.donation_content {
+  display: flex;
+  flex-direction: column;
+  gap: 19px;
+}
+
+.donation_card {
+  display: flex;
+  width: 349px;
+  padding: 10px 15px;
+  background: #F1CDB3;
+  border-radius: 10px;
+}
+
+.donation_icon {
+  margin: 0 15px 0 0;
 }
 
 .button {
@@ -269,6 +314,13 @@ footer,
 
 .slide_img {
   height: 270px;
+}
+
+.text_xs {
+  width: 380px;
+  font-size: 12px;
+  line-height: 18px;
+  color: #B2B2B2;
 }
 
 /*# sourceMappingURL=style.css.map */

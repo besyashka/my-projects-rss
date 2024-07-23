@@ -31,9 +31,16 @@ h2 {
 h3 {
   @include font("Georgia", serif, 35px, 45.5px);
   letter-spacing: 2.1px;
+  color: $color-additional;
 }
 
 h4 {
   @include font("Georgia", serif, 20px, 23px);
   letter-spacing: 1.1px;
+  color: $color-additional;
+}
+
+h5 {
+  @include font("Georgia", serif, 15px, 16.5px);
+  letter-spacing: 0.9px;
 }

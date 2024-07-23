@@ -1,0 +1,33 @@
+.donation {
+  color: $color-additional;
+  background: $color-background;
+}
+
+.donation_container {
+  justify-content: center;
+  align-items: center;
+  padding: 80px 0 0;
+}
+
+.donation_img {
+  height: 261px;
+  margin: 0 30px 0 0;
+}
+
+.donation_content {
+  display: flex;
+  flex-direction: column;
+  gap: 19px;
+}
+
+.donation_card {
+  display: flex;
+  width: 349px;
+  padding: 10px 15px;
+  background: $color-primary;
+  border-radius: 10px;
+}
+
+.donation_icon {
+  margin: 0 15px 0 0;
+}
