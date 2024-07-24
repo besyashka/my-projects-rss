@@ -296,6 +296,7 @@ footer,
   background: #FFFFFF;
   border: 2px solid #F1CDB3;
   border-radius: 100px;
+  cursor: pointer;
 }
 
 .button_colored {
@@ -308,6 +309,11 @@ footer,
   height: 52px;
   border: 2px solid #F1CDB3;
   border-radius: 100px;
+  cursor: pointer;
+}
+.button_control:disabled {
+  border: 2px solid #CDCDCD;
+  pointer-events: none;
 }
 
 .burger {
@@ -356,12 +362,47 @@ footer,
   height: 270px;
 }
 
+.pagination {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.pagination_content {
+  font-family: "Georgia", serif;
+  font-size: 20px;
+  line-height: 23px;
+  font-weight: 400;
+  background: #F6F6F6;
+}
+
 .text_xs {
   width: 380px;
   font-size: 12px;
   font-style: italic;
   line-height: 18px;
   color: #B2B2B2;
+}
+
+.friends_list {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 30px 40px;
+  margin: 60px 0 60px;
+}
+
+.friends_item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+  height: 435px;
+}
+
+.friends_img {
+  height: 270px;
 }
 
 /*# sourceMappingURL=style.css.map */

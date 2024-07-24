@@ -1,0 +1,17 @@
+.friends_list {
+  @include flex($justify: space-between, $wrap: wrap);
+  gap: 30px 40px;
+  margin: 60px 0 60px;
+}
+
+.friends_item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+  height: 435px;
+}
+
+.friends_img {
+  height: 270px;
+}
