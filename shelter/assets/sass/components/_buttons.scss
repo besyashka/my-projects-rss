@@ -8,11 +8,23 @@
   border: 2px solid $color-primary;
   border-radius: 100px;
   cursor: pointer;
+  transition: all 0.5s ease-out;
+
+  &:hover {
+    background: $color-button-hover;
+    border: 2px solid $color-button-hover;
+  }
 }
 
 .button_colored {
   background: $color-primary;
   border: 0px solid $color-primary;
+  transition: all 0.2s ease-out;
+
+  &:hover {
+    background: $color-button-hover;
+    border: 0 solid $color-button-hover;
+  }
 }
 
 .button_control {
@@ -21,6 +33,13 @@
   border: 2px solid $color-primary;
   border-radius: 100px;
   cursor: pointer;
+  transition: all 0.3s ease-out;
+
+  &:hover {
+    background: $color-button-hover;
+    border: 0 solid $color-button-hover;
+  }
+
   &:disabled {
     border: 2px solid $color-text-light;
     pointer-events: none;
