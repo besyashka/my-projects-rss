@@ -1,4 +1,9 @@
 .link {
   color: $color-additional;
   text-decoration: none;
+
+  &.active {
+    pointer-events: none;
+    cursor: default;
+  }
 }
