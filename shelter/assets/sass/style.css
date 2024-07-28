@@ -357,6 +357,7 @@ h5 {
 .button_control {
   width: 52px;
   height: 52px;
+  background: #FAFAFA;
   border: 2px solid #F1CDB3;
   border-radius: 100px;
   cursor: pointer;
@@ -465,6 +466,16 @@ h5 {
   align-items: center;
   gap: 30px;
   height: 435px;
+  cursor: pointer;
+  transition: all 0.3s ease-out;
+}
+.friends_item:hover {
+  background: #FFFFFF;
+  box-shadow: 0px 2px 35px 14px rgba(13, 13, 13, 0.0392156863);
+}
+.friends_item:hover .button {
+  background: #FDDCC4;
+  border: 2px solid #FDDCC4;
 }
 
 .friends_img {
