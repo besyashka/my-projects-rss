@@ -413,6 +413,7 @@ h5 {
   gap: 30px;
   height: 435px;
   background: #FAFAFA;
+  border-radius: 9px;
   cursor: pointer;
   transition: all 0.3s ease-out;
 }
@@ -466,6 +467,8 @@ h5 {
   align-items: center;
   gap: 30px;
   height: 435px;
+  background: #FAFAFA;
+  border-radius: 9px;
   cursor: pointer;
   transition: all 0.3s ease-out;
 }
