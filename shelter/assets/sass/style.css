@@ -411,6 +411,17 @@ h5 {
   align-items: center;
   gap: 30px;
   height: 435px;
+  background: #FAFAFA;
+  cursor: pointer;
+  transition: all 0.3s ease-out;
+}
+.slide:hover {
+  background: #FFFFFF;
+  box-shadow: 0px 2px 35px 14px rgba(13, 13, 13, 0.0392156863);
+}
+.slide:hover .button {
+  background: #FDDCC4;
+  border: 2px solid #FDDCC4;
 }
 
 .slide_img {
