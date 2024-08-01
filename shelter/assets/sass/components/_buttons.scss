@@ -16,17 +16,6 @@
   }
 }
 
-.button_colored {
-  background: $color-primary;
-  border: 0px solid $color-primary;
-  transition: all 0.2s ease-out;
-
-  &:hover {
-    background: $color-button-hover;
-    border: 0 solid $color-button-hover;
-  }
-}
-
 .button_control {
   width: 52px;
   height: 52px;
@@ -44,5 +33,16 @@
   &:disabled {
     border: 2px solid $color-text-light;
     pointer-events: none;
+  }
+}
+
+.button_colored {
+  background: $color-primary;
+  border: 0px solid $color-primary;
+  transition: all 0.2s ease-out;
+
+  &:hover {
+    background: $color-button-hover;
+    border: 0 solid $color-button-hover;
   }
 }

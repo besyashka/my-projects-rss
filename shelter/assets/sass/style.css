@@ -344,16 +344,6 @@ h5 {
   border: 2px solid #FDDCC4;
 }
 
-.button_colored {
-  background: #F1CDB3;
-  border: 0px solid #F1CDB3;
-  transition: all 0.2s ease-out;
-}
-.button_colored:hover {
-  background: #FDDCC4;
-  border: 0 solid #FDDCC4;
-}
-
 .button_control {
   width: 52px;
   height: 52px;
@@ -370,6 +360,16 @@ h5 {
 .button_control:disabled {
   border: 2px solid #CDCDCD;
   pointer-events: none;
+}
+
+.button_colored {
+  background: #F1CDB3;
+  border: 0px solid #F1CDB3;
+  transition: all 0.2s ease-out;
+}
+.button_colored:hover {
+  background: #FDDCC4;
+  border: 0 solid #FDDCC4;
 }
 
 .burger {
