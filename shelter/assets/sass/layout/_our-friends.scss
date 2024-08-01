@@ -9,8 +9,7 @@
 }
 
 .our_friends_text {
-  font-size: 20px;
-  line-height: 22.72px;
+  @include font("Georgia", serif, 20px, 22.72px);
   letter-spacing: 1.5px;
   color: $color-additional;
 }
