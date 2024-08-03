@@ -13,4 +13,7 @@
   height: 2px;
   margin: 5px 0 8px 0;
   background: $color-primary;
+  &_dark {
+    background: $color-modal-text-dark;
+  }
 }
