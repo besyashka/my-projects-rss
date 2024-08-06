@@ -1,13 +1,23 @@
 .about {
   padding: 80px 0 100px;
+  @include media-tablet {
+    padding: 65px 0 100px;
+  }
 }
 
 .about_container {
   justify-content: center;
+  @include media-tablet {
+    flex-wrap: wrap-reverse;
+    gap: 80px;
+  }
 }
 
 .about_img {
   margin-right: 120px;
+  @include media-tablet {
+    margin-right: 0;
+  }
 }
 
 .about_content {
