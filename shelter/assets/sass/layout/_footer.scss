@@ -6,7 +6,13 @@
 .footer_container {
   display: flex;
   justify-content: space-between;
+  flex-wrap: wrap;
   padding-top: 40px;
+  @include media-tablet {
+    justify-content: center;
+    gap: 64px 60px;
+    padding-top: 13px;
+  }
 }
 
 .footer_column {
