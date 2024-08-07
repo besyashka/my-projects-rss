@@ -4,6 +4,9 @@
   flex-wrap: wrap;
   gap: 53px 120px;
   margin: 58px 0 0;
+  @include media-tablet {
+    gap: 53px 60px;
+  }
 }
 
 .item_icon {
@@ -14,4 +17,7 @@
 
 .help_item {
   text-align: center;
+  @include media-tablet {
+    width: 170px;
+  }
 }

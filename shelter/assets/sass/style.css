@@ -302,6 +302,11 @@ h5 {
   gap: 53px 120px;
   margin: 58px 0 0;
 }
+@media (max-width: 768px) {
+  .help_list {
+    gap: 53px 60px;
+  }
+}
 
 .item_icon {
   width: 60px;
@@ -311,6 +316,11 @@ h5 {
 
 .help_item {
   text-align: center;
+}
+@media (max-width: 768px) {
+  .help_item {
+    width: 170px;
+  }
 }
 
 .donation {
@@ -323,10 +333,21 @@ h5 {
   align-items: center;
   padding: 80px 0 0;
 }
+@media (max-width: 768px) {
+  .donation_container {
+    flex-wrap: wrap-reverse;
+    gap: 60px;
+  }
+}
 
 .donation_img {
   height: 261px;
   margin: 0 30px 0 0;
+}
+@media (max-width: 768px) {
+  .donation_img {
+    margin: 0;
+  }
 }
 
 .donation_content {
