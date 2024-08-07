@@ -474,6 +474,11 @@ h5 {
   gap: 53px;
   margin: 60px 0 60px;
 }
+@media (max-width: 768px) {
+  .slider {
+    gap: 12px;
+  }
+}
 
 .slider_container {
   display: flex;
@@ -482,6 +487,11 @@ h5 {
   max-width: 990px;
   overflow: hidden;
 }
+@media (max-width: 768px) {
+  .slider_container {
+    max-width: 580px;
+  }
+}
 
 .slider_line {
   position: relative;
@@ -489,6 +499,11 @@ h5 {
   display: flex;
   gap: 90px;
   max-width: 2250px;
+}
+@media (max-width: 768px) {
+  .slider_line {
+    gap: 40px;
+  }
 }
 
 .slide {
