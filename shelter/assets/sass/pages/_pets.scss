@@ -1,5 +1,7 @@
 .pets_not_only {
-  padding-bottom: 75px;
+  @include media-tablet {
+    padding-bottom: 75px;
+  }
 }
 
 .friends_list {
@@ -35,7 +37,9 @@
 }
 
 .friends_item-hidden-tablet {
-  display: none;
+  @include media-tablet {
+    display: none;
+  }
 }
 
 .friends_img {

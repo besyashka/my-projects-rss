@@ -581,8 +581,10 @@ h5 {
   color: #B2B2B2;
 }
 
-.pets_not_only {
-  padding-bottom: 75px;
+@media (max-width: 768px) {
+  .pets_not_only {
+    padding-bottom: 75px;
+  }
 }
 
 .friends_list {
@@ -620,8 +622,10 @@ h5 {
   border: 2px solid #FDDCC4;
 }
 
-.friends_item-hidden-tablet {
-  display: none;
+@media (max-width: 768px) {
+  .friends_item-hidden-tablet {
+    display: none;
+  }
 }
 
 .friends_img {
