@@ -581,6 +581,10 @@ h5 {
   color: #B2B2B2;
 }
 
+.pets_not_only {
+  padding-bottom: 75px;
+}
+
 .friends_list {
   display: flex;
   justify-content: space-between;
@@ -588,6 +592,12 @@ h5 {
   flex-wrap: wrap;
   gap: 30px 40px;
   margin: 60px 0 60px;
+}
+@media (max-width: 768px) {
+  .friends_list {
+    justify-content: center;
+    margin: 30px 0 40px;
+  }
 }
 
 .friends_item {
@@ -608,6 +618,10 @@ h5 {
 .friends_item:hover .button {
   background: #FDDCC4;
   border: 2px solid #FDDCC4;
+}
+
+.friends_item-hidden-tablet {
+  display: none;
 }
 
 .friends_img {
