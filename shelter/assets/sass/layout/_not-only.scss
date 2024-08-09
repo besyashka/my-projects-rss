@@ -48,7 +48,9 @@
 
 .not_only_button {
   width: 207px;
-  margin: auto;
+  @include media-tablet {
+    margin: auto;
+  }
 }
 
 .not_only_img {

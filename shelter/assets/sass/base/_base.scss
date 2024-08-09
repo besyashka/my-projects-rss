@@ -51,9 +51,16 @@ h4 {
   @include font("Georgia", serif, 20px, 23px);
   letter-spacing: 1.1px;
   color: $color-additional;
+  @include media-mobile {
+    font-size: 15px;
+    letter-spacing: 0.9px;
+  }
 }
 
 h5 {
   @include font("Georgia", serif, 15px, 16.5px);
   letter-spacing: 0.9px;
+  @include media-mobile {
+    letter-spacing: 0;
+  }
 }

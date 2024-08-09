@@ -11,6 +11,10 @@
     flex-wrap: wrap-reverse;
     gap: 60px;
   }
+  @include media-mobile {
+    gap: 41px;
+    padding: 39px 0 0;
+  }
 }
 
 .donation_img {
@@ -19,12 +23,18 @@
   @include  media-tablet {
     margin: 0;
   }
+  @include media-mobile {
+    height: 135.2px;
+  }
 }
 
 .donation_content {
   display: flex;
   flex-direction: column;
   gap: 19px;
+  @include media-mobile {
+    gap: 23px;
+  }
 }
 
 .donation_card {
@@ -33,6 +43,9 @@
   padding: 10px 15px;
   background: $color-primary;
   border-radius: 10px;
+  @include media-mobile {
+    width: 281px;
+  }
 }
 
 .donation_icon {
