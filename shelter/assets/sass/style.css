@@ -799,6 +799,11 @@ h5 {
     padding-bottom: 75px;
   }
 }
+@media (max-width: 380px) {
+  .pets_not_only {
+    padding-bottom: 45px;
+  }
+}
 
 .friends_list {
   display: flex;
@@ -812,6 +817,11 @@ h5 {
   .friends_list {
     justify-content: center;
     margin: 30px 0 40px;
+  }
+}
+@media (max-width: 380px) {
+  .friends_list {
+    margin-top: 43px;
   }
 }
 
