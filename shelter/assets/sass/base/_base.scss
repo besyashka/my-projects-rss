@@ -39,6 +39,12 @@ h3 {
   @include font("Georgia", serif, 35px, 45.5px);
   letter-spacing: 2.1px;
   color: $color-additional;
+  @include media-mobile {
+    font-size: 25px;
+    line-height: 32.5px;
+    letter-spacing: 1.5px;
+    text-align: center;
+  }
 }
 
 h4 {

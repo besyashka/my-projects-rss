@@ -5,6 +5,12 @@
   @include media-tablet {
     gap: 12px;
   }
+  @include media-mobile {
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    gap: 19px;
+    margin: 42px 0 42px;
+  }
 }
 
 .slider_container {
@@ -15,6 +21,10 @@
   overflow: hidden;
   @include media-tablet {
     max-width: 580px;
+  }
+  @include media-mobile {
+    max-width: 270px;
+    order: -1;
   }
 }
 
@@ -54,3 +64,9 @@
 .slide_img {
   height: 270px;
 }
+
+/* .slider_control_next {
+  @include media-mobile {
+    order: 1;
+  }
+} */
