@@ -26,6 +26,13 @@ h1 {
 h2 {
   @include font("Georgia", serif, 44px, 57.2px);
   padding: 80px 0 0;
+  @include media-mobile {
+    font-size: 25px;
+  }
+  @include media-mobile {
+    line-height: 32.5px;
+    letter-spacing: 1.5px;
+  }
 }
 
 h3 {

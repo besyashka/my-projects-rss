@@ -4,6 +4,9 @@
   @include media-tablet {
     padding: 25px 30px;
   }
+  @include media-mobile {
+    padding: 25px 20px;
+  }
 }
 
 .logo_title {

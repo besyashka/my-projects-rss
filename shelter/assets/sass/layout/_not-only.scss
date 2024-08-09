@@ -13,6 +13,9 @@
     justify-content: end;
     gap: 100px;
   }
+  @include media-mobile {
+    gap: 105px;
+  }
 }
 
 .not_only_content {
@@ -22,6 +25,9 @@
     margin: auto;
     padding-top: 0;
   }
+  @include media-mobile {
+    text-align: center;
+  }
 }
 
 .not_only_title {
@@ -29,6 +35,9 @@
   color: $color-title-light;
   @include media-tablet {
     padding-top: 0;
+  }
+  @include media-mobile {
+    padding: 0 24px;
   }
 }
 
@@ -44,6 +53,9 @@
 
 .not_only_img {
   @include media-tablet {
-    width: 569px;
+    width: 74vw;
+  }
+  @include media-mobile {
+    width: 81vw;
   }
 }
