@@ -12,8 +12,16 @@
   flex-wrap: $wrap;
 }
 
+@mixin media-desktop {
+  @media (max-width: $width-desktop) { @content; }
+}
+
 @mixin media-tablet {
   @media (max-width: $width-tablet) { @content; }
+}
+
+@mixin media-breakpoint {
+  @media (max-width: $width-breakpoint) { @content; }
 }
 
 @mixin media-mobile {

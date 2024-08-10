@@ -476,7 +476,7 @@ h5 {
     margin: 0;
   }
 }
-@media (max-width: 380px) {
+@media (max-width: 707px) {
   .donation_img {
     height: 135.2px;
   }
@@ -691,12 +691,12 @@ h5 {
   gap: 53px;
   margin: 60px 0 60px;
 }
-@media (max-width: 768px) {
+@media (max-width: 1200px) {
   .slider {
     gap: 12px;
   }
 }
-@media (max-width: 380px) {
+@media (max-width: 707px) {
   .slider {
     flex-wrap: wrap;
     justify-content: space-evenly;
@@ -712,15 +712,14 @@ h5 {
   max-width: 990px;
   overflow: hidden;
 }
-@media (max-width: 768px) {
+@media (max-width: 1200px) {
   .slider_container {
     max-width: 580px;
   }
 }
-@media (max-width: 380px) {
+@media (max-width: 707px) {
   .slider_container {
     max-width: 270px;
-    order: -1;
   }
 }
 
@@ -731,7 +730,7 @@ h5 {
   gap: 90px;
   max-width: 2250px;
 }
-@media (max-width: 768px) {
+@media (max-width: 1200px) {
   .slider_line {
     gap: 40px;
   }
@@ -761,11 +760,15 @@ h5 {
   height: 270px;
 }
 
-/* .slider_control_next {
-  @include media-mobile {
-    order: 1;
+.slider_control_prev {
+  order: -1;
+}
+@media (max-width: 707px) {
+  .slider_control_prev {
+    order: 0;
   }
-} */
+}
+
 .pagination {
   display: flex;
   justify-content: center;
@@ -807,7 +810,7 @@ h5 {
 
 .friends_list {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
   flex-wrap: wrap;
   gap: 30px 40px;
@@ -815,7 +818,6 @@ h5 {
 }
 @media (max-width: 768px) {
   .friends_list {
-    justify-content: center;
     margin: 30px 0 40px;
   }
 }

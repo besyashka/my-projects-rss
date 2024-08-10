@@ -23,7 +23,7 @@
   @include  media-tablet {
     margin: 0;
   }
-  @include media-mobile {
+  @include media-breakpoint {
     height: 135.2px;
   }
 }
