@@ -1,5 +1,5 @@
 .button {
-  display: inline-block;
+  display: block;
   padding: 15px 45px;
   @include font("Georgia", serif, 17px, 21.1px);
   letter-spacing: 1px;
@@ -13,17 +13,6 @@
   &:hover {
     background: $color-button-hover;
     border: 2px solid $color-button-hover;
-  }
-}
-
-.button_colored {
-  background: $color-primary;
-  border: 0px solid $color-primary;
-  transition: all 0.2s ease-out;
-
-  &:hover {
-    background: $color-button-hover;
-    border: 0 solid $color-button-hover;
   }
 }
 
@@ -44,5 +33,16 @@
   &:disabled {
     border: 2px solid $color-text-light;
     pointer-events: none;
+  }
+}
+
+.button_colored {
+  background: $color-primary;
+  border: 0px solid $color-primary;
+  transition: all 0.2s ease-out;
+
+  &:hover {
+    background: $color-button-hover;
+    border: 0 solid $color-button-hover;
   }
 }

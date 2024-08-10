@@ -1,7 +1,22 @@
+.pets_not_only {
+  @include media-tablet {
+    padding-bottom: 75px;
+  }
+  @include media-mobile {
+    padding-bottom: 45px;
+  }
+}
+
 .friends_list {
-  @include flex($justify: space-between, $wrap: wrap);
+  @include flex($justify: center, $wrap: wrap);
   gap: 30px 40px;
   margin: 60px 0 60px;
+  @include media-tablet {
+    margin: 30px 0 40px;
+  }
+  @include media-mobile {
+    margin-top: 43px;
+  }
 }
 
 .friends_item {
@@ -23,6 +38,18 @@
       background: $color-button-hover;
       border: 2px solid $color-button-hover;
     }
+  }
+}
+
+.friends_item-hidden-tablet {
+  @include media-tablet {
+    display: none;
+  }
+}
+
+.friends_item-hidden-mobile {
+  @include media-mobile {
+    display: none;
   }
 }
 

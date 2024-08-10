@@ -4,14 +4,34 @@
   flex-wrap: wrap;
   gap: 53px 120px;
   margin: 58px 0 0;
+  @include media-tablet {
+    gap: 53px 60px;
+  }
+  @include media-mobile {
+    justify-content: space-between;
+    gap: 27px 26px;
+    margin: 42px 0 0;
+    padding: 0px 5px;
+  }
 }
 
 .item_icon {
   width: 60px;
   height: 60px;
   margin: 0 0 25px;
+  @include media-mobile {
+    width: 50px;
+    height: 50px;
+    margin: 0 0 10px;
+  }
 }
 
 .help_item {
   text-align: center;
+  @include media-tablet {
+    width: 170px;
+  }
+  @include media-mobile {
+    width: 130px;
+  }
 }

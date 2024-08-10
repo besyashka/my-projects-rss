@@ -2,23 +2,62 @@
   padding: 61px 0 0;
   background: url(../../images/background/noise_transparent.png),
   radial-gradient(110.67% 538.64% at 5.73% 50%, #513D2F 0%, #1A1A1C 100%);
+  @include media-tablet {
+    padding: 32px 0 0;
+  }
 }
 
 .not_only_container {
   justify-content: space-between;
+  @include media-tablet {
+    justify-content: end;
+    gap: 100px;
+  }
+  @include media-mobile {
+    gap: 105px;
+  }
 }
 
 .not_only_content {
   max-width: 460px;
   padding-top: 84px;
+  @include media-tablet {
+    margin: auto;
+    padding-top: 0;
+  }
+  @include media-mobile {
+    text-align: center;
+  }
 }
 
 .not_only_title {
   max-width: 310px;
   color: $color-title-light;
+  @include media-tablet {
+    padding-top: 0;
+  }
+  @include media-mobile {
+    padding: 0 24px;
+  }
 }
 
 .not_only_text {
   margin: 40px 0 43px;
   color: $color-text-light;
+}
+
+.not_only_button {
+  width: 207px;
+  @include media-tablet {
+    margin: auto;
+  }
+}
+
+.not_only_img {
+  @include media-tablet {
+    width: 74vw;
+  }
+  @include media-mobile {
+    width: 81vw;
+  }
 }

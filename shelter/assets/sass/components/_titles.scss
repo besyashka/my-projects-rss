@@ -1,4 +1,7 @@
 .title_center {
   padding: 80px 0 0;
   text-align: center;
+  @include media-mobile {
+    padding: 41px 0 0;
+  }
 }

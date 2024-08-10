@@ -1,6 +1,12 @@
 .header_container {
   padding: 25px 40px;
   @include flex($justify: space-between);
+  @include media-tablet {
+    padding: 25px 30px;
+  }
+  @include media-mobile {
+    padding: 25px 20px;
+  }
 }
 
 .logo_title {
