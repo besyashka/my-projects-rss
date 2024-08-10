@@ -1,5 +1,5 @@
 .navigation_list {
-  @include flex($justify: flex-end);
+  @include flex($justify: flex-end, $wrap: wrap);
   list-style: none;
 }
 

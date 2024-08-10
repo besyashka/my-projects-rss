@@ -179,7 +179,7 @@ h5 {
   display: flex;
   justify-content: flex-end;
   align-items: center;
-  flex-wrap: nowrap;
+  flex-wrap: wrap;
   list-style: none;
 }
 
