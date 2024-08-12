@@ -728,6 +728,7 @@ h5 {
     flex-wrap: wrap;
     justify-content: space-evenly;
     gap: 19px;
+    max-width: 300px;
     margin: 42px 0 42px;
   }
 }
