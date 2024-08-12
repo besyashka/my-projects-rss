@@ -620,10 +620,12 @@ h5 {
 }
 @media (max-width: 380px) {
   .footer_img {
-    margin-top: 19px;
+    width: 260px;
+    max-height: 296px;
+    margin-top: 12px;
   }
   .footer_img > img {
-    width: 260px;
+    width: 100%;
   }
 }
 
