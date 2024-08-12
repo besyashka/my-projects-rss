@@ -801,13 +801,17 @@ h5 {
   justify-content: center;
   gap: 20px;
 }
+@media (max-width: 707px) {
+  .pagination {
+    gap: 10px;
+  }
+}
 
 .pagination_content {
   font-family: "Georgia", serif;
   font-size: 20px;
   line-height: 23px;
   font-weight: 400;
-  /*   background: $color-background; */
 }
 
 .text_xs {
