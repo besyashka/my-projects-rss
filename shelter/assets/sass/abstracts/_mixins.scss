@@ -20,6 +20,10 @@
   @media (max-width: $width-tablet) { @content; }
 }
 
+@mixin media-tablet-burger-menu {
+  @media (max-width: $width-tablet-burger-menu) { @content; }
+}
+
 @mixin media-breakpoint {
   @media (max-width: $width-breakpoint) { @content; }
 }
