@@ -11,6 +11,10 @@
     font-size: 32px;
     background: $color-text-button;
 
+    &_light {
+      background: $color-title-light;
+    }
+
     &.active {
       right: 0;
     }

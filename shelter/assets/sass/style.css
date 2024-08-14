@@ -188,6 +188,9 @@ h5 {
     font-size: 32px;
     background: #292929;
   }
+  .navigation_light {
+    background: #FFFFFF;
+  }
   .navigation.active {
     right: 0;
   }
