@@ -776,6 +776,7 @@ h5 {
   display: flex;
   gap: 90px;
   max-width: 2250px;
+  transition: all 0.5s;
 }
 @media (max-width: 1200px) {
   .slider_line {

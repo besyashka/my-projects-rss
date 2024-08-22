@@ -38,6 +38,7 @@
   display: flex;
   gap: 90px;
   max-width: 2250px;
+  transition: all 0.5s;
 
   @include media-desktop {
     gap: 40px;
