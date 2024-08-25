@@ -1,6 +1,7 @@
 console.log('100 баллов');
 import { handleClickBurger } from './burger.js';
 import { Card } from './Card.js';
+import { getArrayCards } from './slider.js';
 
 let cardsArray = [];
 
