@@ -1,0 +1,47 @@
+.modal_window {
+  position: relative;
+  top: 17%;
+  left: 18.3%;
+  display: flex;
+  flex-direction: column;
+  max-width: 946px;
+  color: $color-modal-text-dark;
+}
+
+.modal_container {
+  display: flex;
+  max-width: 900px;
+  font-family: "Georgia", serif;
+  border-radius: 9px;
+  background: $color-background;
+}
+
+.modal_img {
+  width: 500px;
+  height: 500px;
+}
+
+.modal_content {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 50px 30px;
+}
+
+.modal_text {
+  margin: 30px 0;
+}
+
+.modal_list {
+  padding-left: 0;
+}
+
+.modal_item {
+  list-style-type: none;
+
+  &::before {
+    color: $color-primary;
+    content: "•";
+    padding-right: 10px;
+  }
+}
