@@ -2,8 +2,7 @@ console.log('100 баллов');
 import { handleClickBurger } from './burger.js';
 import { Card } from './Card.js';
 import { getArrayCards } from './slider.js';
-
-let cardsArray = [];
+import { openModalWindow } from './modal-window.js';
 
 const fetchCard = () => {
   fetch ('./assets/pets.json')
@@ -11,7 +10,7 @@ const fetchCard = () => {
     return response.json();
   })
   .then((pets) => {
-    cardsArray = pets.map(({
+    let cardsArray = pets.map(({
       name,
       img,
       type,
@@ -25,7 +24,8 @@ const fetchCard = () => {
       new Card(name, img, type, breed, description, age, inoculations, diseases, parasites)
     );
 
-    getArrayCards(cardsArray)
+    getArrayCards(cardsArray);
+    openModalWindow(cardsArray);
   });
 };
 
