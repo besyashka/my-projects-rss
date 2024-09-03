@@ -863,16 +863,22 @@ h5 {
 .modal_window {
   position: relative;
   top: 9%;
-  left: 20%;
+  left: 16%;
   display: flex;
   flex-direction: column;
-  max-width: 946px;
+  max-width: 76vw;
   color: #000000;
+}
+@media (max-width: 380px) {
+  .modal_window {
+    max-width: 82vw;
+  }
 }
 
 .modal_container {
   display: flex;
-  max-width: 900px;
+  align-items: center;
+  max-width: 72vw;
   font-family: "Georgia", serif;
   border-radius: 9px;
   background: #F6F6F6;
@@ -881,17 +887,48 @@ h5 {
 .modal_img {
   width: 500px;
   height: 500px;
+  border-radius: 9px;
+}
+@media (max-width: 1200px) {
+  .modal_img {
+    width: 350px;
+    height: 350px;
+  }
+}
+@media (max-width: 707px) {
+  .modal_img {
+    display: none;
+  }
 }
 
 .modal_content {
   display: flex;
   flex-direction: column;
   gap: 10px;
-  padding: 50px 30px;
+  padding: 50px 20px;
+}
+@media (max-width: 768px) {
+  .modal_content {
+    padding: 11px 10px;
+  }
+}
+
+.title_modal {
+  color: #000000;
+}
+@media (max-width: 707px) {
+  .title_modal {
+    text-align: center;
+  }
 }
 
 .modal_text {
   margin: 30px 0;
+}
+@media (max-width: 768px) {
+  .modal_text {
+    font-size: 13px;
+  }
 }
 
 .modal_list {
@@ -905,6 +942,10 @@ h5 {
   color: #F1CDB3;
   content: "•";
   padding-right: 10px;
+}
+
+.text_accent {
+  font-weight: 700;
 }
 
 @media (max-width: 768px) {

@@ -12,25 +12,36 @@ export class Card {
   }
 
   generateSlideCard() {
-    let templateSlide = '';
+    const slide = document.createElement('div');
+    const slideContainerImg = document.createElement('div');
+    const slideImg = document.createElement('img');;
+    const SlideText = document.createElement('span')
+    const slideButton = document.createElement('button');
 
-    templateSlide += `<div class="slide">`;
-    templateSlide += `<div class="slide_img">`;
-    templateSlide += `<img src=${this.img} alt="pets ${this.img}">`;
-    templateSlide += `</div>`;
-    templateSlide += `<span class="our_friends_text">${this.name}</span>`;
-    templateSlide += `<button class="button">Learn more</button>`;
-    templateSlide += `</div>`;
+    slide.classList.add('slide');
+    slideContainerImg.classList.add('slide_img');
+    SlideText.classList.add('our_friends_text');
+    slideButton.classList.add('button');
 
-    return templateSlide;
+    slideImg.src = this.img;
+    slideImg.alt = `pets ${this.type}`;
+    SlideText .textContent = `${this.name}`;
+    slideButton.textContent = 'Learn more';
+
+    slide.appendChild(slideContainerImg);
+    slideContainerImg.appendChild(slideImg);
+    slide.appendChild(SlideText);
+    slide.appendChild(slideButton);
+
+    return slide;
   }
 
   generatePetsCardForModal() {
     const listItemsArray = [
-      `Age: ${this.age}`,
-      `Inoculations: ${this.inoculations}`,
-      `Diseases: ${this.diseases}`,
-      `Parasite: ${this.parasites}`
+      `<span class="text_accent">Age:</span> ${this.age}`,
+      `<span class="text_accent">Inoculations:</span> ${this.inoculations}`,
+      `<span class="text_accent">Diseases:</span> ${this.diseases}`,
+      `<span class="text_accent">Parasite:</span> ${this.parasites}`
     ];
 
     const modalWindow = document.createElement('div');
@@ -48,6 +59,8 @@ export class Card {
     modalContainer.classList.add('modal_container');
     img.classList.add('modal_img');
     modalContent.classList.add('modal_content');
+    nameElement.classList.add('title_modal');
+    typeElement.classList.add('title_modal');
     descriptionElement.classList.add('modal_text');
     list.classList.add('modal_list');
 
@@ -60,7 +73,7 @@ export class Card {
     
     for (let i = 0; i < listItemsArray.length; i++) {
       const listItem = document.createElement('li');
-      listItem.textContent = listItemsArray[i];
+      listItem.innerHTML = listItemsArray[i];
       listItem.classList.add('modal_item');
       list.appendChild(listItem);
     }
