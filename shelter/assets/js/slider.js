@@ -39,21 +39,35 @@ const createNewSlider = (slideArray) => {
 const handleClickButtonSliderNext = () => {
   document.querySelector('.slider_control_next').addEventListener('click', () => {
     let slides = document.querySelectorAll('.slide');
+    let numberOfSlides = null;
+
+    if (window.innerWidth < 708) {
+      numberOfSlides = 1;
+    } else if (window.innerWidth < 1201) {
+      numberOfSlides = 2;
+    } else {
+      numberOfSlides = 3;
+    }
 
     slides.forEach((slide, index) => {
-      slide.style.left = `${(index - 1) * (270 + 90)}px`;
+      slide.style.left = `${(index - numberOfSlides) * (270 + 90)}px`;
     });
-    
-    if (slides.length <= 3) {
-      shuffleArrayCards(slideArrayCopy);
-    } else {
-      setTimeout(() => {
-        slides[0].remove();
-      }, 1000);
-    }
+
+    setTimeout(() => {
+      for (let i = 0; i < numberOfSlides; i++) {
+        slides[i].remove();
+      }
+
+      slides = document.querySelectorAll('.slide');
+
+      if (slides.length <= 3) {
+        shuffleArrayCards(slideArrayCopy);
+      }
+    }, 1000);
   });
 }
 
 if (document.querySelector('.slider_control_next') !== null) {
   handleClickButtonSliderNext();
+  window.addEventListener('resize', handleClickButtonSliderNext);
 }
