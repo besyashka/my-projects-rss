@@ -764,8 +764,6 @@ h5 {
   justify-content: space-between;
   align-items: center;
   max-width: 990px;
-  overflow: hidden;
-  /*  transition: transform 1s ease-in-out; */
 }
 @media (max-width: 1200px) {
   .slider_container {
@@ -784,9 +782,9 @@ h5 {
   display: flex;
   gap: 90px;
   max-width: 2250px;
-  /* overflow: hidden; */
-  /* transition: all ease 1s; */
-  transition: transform 1s ease-in-out;
+  width: 990px;
+  height: 435px;
+  overflow: hidden;
 }
 @media (max-width: 1200px) {
   .slider_line {
@@ -795,16 +793,16 @@ h5 {
 }
 
 .slide {
+  position: absolute;
+  left: 0;
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 30px;
-  height: 435px;
   background: #FAFAFA;
   border-radius: 9px;
   cursor: pointer;
-  /*  transition: all ease 1s;
-   transition: transform 1s ease-in-out; */
+  transition: all ease 1s;
 }
 .slide:hover {
   background: #FFFFFF;
