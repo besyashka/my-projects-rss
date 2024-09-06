@@ -32,6 +32,7 @@ const handleClickNavigation = () => {
     link.addEventListener('click', () => {
       closeBurgerMenu();
     });
+    console.log(link)
   })
 };
 

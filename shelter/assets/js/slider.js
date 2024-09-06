@@ -89,7 +89,7 @@ const checkWidth = () => {
     number = 3;
   }
 
-  return numberOfSlides;
+  return number;
 }
 
 if (document.querySelector('.slider_control_next') !== null) {

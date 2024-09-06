@@ -3,7 +3,7 @@
   text-decoration: none;
 
   &.active {
-    pointer-events: none;
+    pointer-events: auto;
     cursor: default;
   }
 }
