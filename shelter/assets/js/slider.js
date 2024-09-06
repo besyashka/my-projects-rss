@@ -39,15 +39,7 @@ const createNewSlider = (slideArray) => {
 const handleClickButtonSliderNext = () => {
   document.querySelector('.slider_control_next').addEventListener('click', () => {
     let slides = document.querySelectorAll('.slide');
-    let numberOfSlides = null;
-
-    if (window.innerWidth < 708) {
-      numberOfSlides = 1;
-    } else if (window.innerWidth < 1201) {
-      numberOfSlides = 2;
-    } else {
-      numberOfSlides = 3;
-    }
+    let numberOfSlides = checkWidth();
 
     slides.forEach((slide, index) => {
       slide.style.left = `${(index - numberOfSlides) * (270 + 90)}px`;
@@ -67,7 +59,41 @@ const handleClickButtonSliderNext = () => {
   });
 }
 
+const handleClickButtonPrev = () => {
+  document.querySelector('.slider_control_prev').addEventListener('click', () => {
+    let slides = document.querySelectorAll('.slide');
+    let numberOfSlides = checkWidth();
+
+    slides.forEach((slide, index) => {
+      slide.style.left = `${(index + numberOfSlides) * (270 + 90)}px`;
+    });
+
+    setTimeout(() => {
+      /* for (let i = 0; i < numberOfSlides; i++) {
+        slides[i].remove();
+      } */
+
+      shuffleArrayCards(slideArrayCopy);
+    }, 1000);
+  });
+}
+
+const checkWidth = () => {
+  let number = null;
+
+  if (window.innerWidth < 708) {
+    number = 1;
+  } else if (window.innerWidth < 1201) {
+    number = 2;
+  } else {
+    number = 3;
+  }
+
+  return numberOfSlides;
+}
+
 if (document.querySelector('.slider_control_next') !== null) {
   handleClickButtonSliderNext();
-  window.addEventListener('resize', handleClickButtonSliderNext);
+  handleClickButtonPrev();
+  window.addEventListener('resize', checkWidth);
 }
