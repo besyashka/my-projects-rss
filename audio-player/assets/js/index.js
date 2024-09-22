@@ -34,6 +34,7 @@ const switchNextTrack = () => {
     audioElement.src = listMusic[index].audio;
     audioElement.play();
     toggleImageInPlayer(index);
+    changeAuthorAndNameTrack(index);
   });
 }
 
@@ -47,11 +48,17 @@ const switchPrevTrack = () => {
     audioElement.src = listMusic[index].audio;
     audioElement.play();
     toggleImageInPlayer(index);
+    changeAuthorAndNameTrack(index);
   });
 }
 
 const toggleImageInPlayer = (currentIndex) => {
-  document.querySelector('img').src = listMusic[currentIndex].img;
+  document.querySelector('.img').src = listMusic[currentIndex].img;
+}
+
+const changeAuthorAndNameTrack = (currentIndex) => {
+  document.querySelector('.author-track').innerHTML = listMusic[currentIndex].author;
+  document.querySelector('.name-track').innerHTML = listMusic[currentIndex].name;
 }
 
 toggleIconPlay();

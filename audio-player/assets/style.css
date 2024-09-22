@@ -38,6 +38,11 @@ body {
   height: 100%;
 }
 
+.player_content {
+  padding: 20px;
+  text-align: center;
+}
+
 .player_wrapper_button {
   display: flex;
   justify-content: center;
@@ -66,6 +71,15 @@ body {
 .pause {
   background-image: url('./images/svg/pause.svg');
   background-size: cover;
+}
+
+.author-track {
+  font-size: 25px;
+  color: #2bbde7;
+}
+
+.name-track {
+  color: #9dcefc;
 }
 
 .link {

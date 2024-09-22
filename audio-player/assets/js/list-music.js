@@ -1,6 +1,6 @@
 export const listMusic = [
   {
-    author: "Arsenium and Mianna and Heren",
+    author: "Arsenium Mianna Heren",
     name: "Bon Ami",
     img: "./assets/images/track-covers/Bon-Ami.jpg",
     audio: "./assets/audio/Arsenium_and_Mianna_and_Heren_-_Bon_Ami.mp3"
