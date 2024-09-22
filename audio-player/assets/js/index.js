@@ -24,4 +24,30 @@ const toggleIconPlay = () => {
   });
 }
 
+const switchNextTrack = () => {
+  document.querySelector('.player_button_next').addEventListener('click', () => {
+    if (index === listMusic.length - 1) {
+      index = 0;
+    } else {
+      index++;
+    }
+    audioElement.src = listMusic[index].audio;
+    audioElement.play();
+  });
+}
+
+const switchPrevTrack = () => {
+  document.querySelector('.player_button_prev').addEventListener('click', () => {
+    if (index <= 0) {
+      index += (listMusic.length - 1);
+    } else {
+      index--;
+    }
+    audioElement.src = listMusic[index].audio;
+    audioElement.play();
+  });
+}
+
 toggleIconPlay();
+switchNextTrack();
+switchPrevTrack();
