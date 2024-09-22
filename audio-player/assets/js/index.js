@@ -33,6 +33,7 @@ const switchNextTrack = () => {
     }
     audioElement.src = listMusic[index].audio;
     audioElement.play();
+    toggleImageInPlayer(index);
   });
 }
 
@@ -45,7 +46,12 @@ const switchPrevTrack = () => {
     }
     audioElement.src = listMusic[index].audio;
     audioElement.play();
+    toggleImageInPlayer(index);
   });
+}
+
+const toggleImageInPlayer = (currentIndex) => {
+  document.querySelector('img').src = listMusic[currentIndex].img;
 }
 
 toggleIconPlay();
