@@ -32,7 +32,11 @@ const switchNextTrack = () => {
       index++;
     }
     audioElement.src = listMusic[index].audio;
-    audioElement.play();
+
+    if (isPlay) {
+      audioElement.play();
+    }
+
     toggleImageInPlayer(index);
     changeAuthorAndNameTrack(index);
   });
@@ -46,7 +50,11 @@ const switchPrevTrack = () => {
       index--;
     }
     audioElement.src = listMusic[index].audio;
-    audioElement.play();
+
+    if (isPlay) {
+      audioElement.play();
+    }
+    
     toggleImageInPlayer(index);
     changeAuthorAndNameTrack(index);
   });
