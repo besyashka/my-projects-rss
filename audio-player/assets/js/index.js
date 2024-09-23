@@ -5,9 +5,10 @@ const audioElement = new Audio();
 let isPlay = false;
 let index = 0;
 
+audioElement.src = listMusic[index].audio;
+
 const playAudio = () => {
-  if (!isPlay) {
-    audioElement.src = listMusic[index].audio;
+  if (!isPlay) { 
     audioElement.currentTime = 0;
     isPlay = true;
     audioElement.play();
@@ -54,7 +55,7 @@ const switchPrevTrack = () => {
     if (isPlay) {
       audioElement.play();
     }
-    
+
     toggleImageInPlayer(index);
     changeAuthorAndNameTrack(index);
   });
@@ -69,6 +70,26 @@ const changeAuthorAndNameTrack = (currentIndex) => {
   document.querySelector('.name-track').innerHTML = listMusic[currentIndex].name;
 }
 
+const getTrackDuration  = () => {
+  audioElement.addEventListener('loadedmetadata', () => {
+    let audioDuration = audioElement.duration;
+    convertTimeFromSeconds(audioDuration);
+  })
+}
+
+const convertTimeFromSeconds = (seconds) => {
+  const trackDuration = document.querySelector('.track-duration');
+  const minutes = Math.floor(seconds / 60);
+  const timeSeconds = Math.floor(seconds % 60);
+
+  if(timeSeconds < 10) {
+    trackDuration.innerHTML = `${minutes}:0${timeSeconds}`;
+  } else {
+    trackDuration.innerHTML = `${minutes}:${timeSeconds}`;
+  };
+};
+
+getTrackDuration();
 toggleIconPlay();
 switchNextTrack();
 switchPrevTrack();
