@@ -89,6 +89,10 @@ const convertTimeFromSeconds = (seconds) => {
   };
 };
 
+document.querySelector('.progress-bar').addEventListener('change', () => {
+  console.log('change')
+});
+
 getTrackDuration();
 toggleIconPlay();
 switchNextTrack();
