@@ -75,25 +75,31 @@ const changeAuthorAndNameTrack = (currentIndex) => {
 const getTrackDuration  = () => {
   audioElement.addEventListener('loadedmetadata', () => {
     let audioDuration = audioElement.duration;
-    convertTimeFromSeconds(audioDuration);
+    const trackDuration = document.querySelector('.track-duration');
+    convertTime(audioDuration, trackDuration);
   })
 }
 
-const convertTimeFromSeconds = (seconds) => {
-  const trackDuration = document.querySelector('.track-duration');
+const convertTime = (seconds, time) => {
   const minutes = Math.floor(seconds / 60);
   const timeSeconds = Math.floor(seconds % 60);
 
-  if(timeSeconds < 10) {
-    trackDuration.innerHTML = `${minutes}:0${timeSeconds}`;
+  if (timeSeconds < 10) {
+    time.innerHTML = `${minutes}:0${timeSeconds}`;
   } else {
-    trackDuration.innerHTML = `${minutes}:${timeSeconds}`;
+    time.innerHTML = `${minutes}:${timeSeconds}`;
   };
 };
 
 const updateProgressBar = () => {
   audioElement.addEventListener('timeupdate', () => {
     progressBar.value = Math.floor(audioElement.currentTime);
+    progressBar.max = Math.floor(audioElement.duration);
+
+    const trackCurrentTime = document.querySelector('.track-current-time');
+    let audioCurrentTime = audioElement.currentTime;
+
+    convertTime(audioCurrentTime, trackCurrentTime)
   });
 }
 
