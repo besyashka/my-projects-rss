@@ -2,7 +2,6 @@ import { listMusic } from './list-music.js';
 const buttonPLay = document.querySelector('.player_button-play');
 const audioElement = new Audio();
 const progressBar = document.querySelector('.progress-bar');
-const trackCurrentTime = document.querySelector('.track-current-time');
 
 let isPlay = false;
 let index = 0;
@@ -99,7 +98,7 @@ const updateProgressBar = () => {
     const trackCurrentTime = document.querySelector('.track-current-time');
     let audioCurrentTime = audioElement.currentTime;
 
-    convertTime(audioCurrentTime, trackCurrentTime)
+    convertTime(audioCurrentTime, trackCurrentTime);
   });
 }
 
