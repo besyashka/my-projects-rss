@@ -36,9 +36,10 @@ const createImg = (imagePath) => {
 
 const getEnteredTextForSearch = () => {
   const input = document.querySelector('.input-search');
-  const buttonSearch = document.querySelector('.button_search_icon');
+  const buttonSearch = document.querySelector('.button_search');
 
-  buttonSearch.addEventListener('click', () => {
+  buttonSearch.addEventListener('click', (e) => {
+    e.preventDefault();
     valueInput = input.value;
     getData();
   });

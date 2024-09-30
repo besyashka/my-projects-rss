@@ -40,8 +40,10 @@ body {
   margin-right: 10px;
 }
 
-.header_search {
-  position: relative;
+.search_from {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
 }
 
 .input-search {
@@ -57,11 +59,16 @@ body {
   border-color: #f24141b2;
 }
 
-.button_search_icon {
-  position: absolute;
-  top: 7px;
-  right: 10px;
-  width: 30px;
+.button_search {
+  width: 50px;
+  background: white;
+  border-radius: 20px;
+  border: 2px solid #f24141b2;
+  cursor: pointer;
+}
+
+.search_icon {
+  width: 25px;
   height: 30px;
   cursor: pointer;
 }
