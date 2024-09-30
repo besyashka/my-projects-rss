@@ -43,6 +43,13 @@ const getEnteredTextForSearch = () => {
     valueInput = input.value;
     getData();
   });
+
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Enter') {
+      valueInput = input.value;
+      getData();
+    }
+  });
 }
 
 getData();
