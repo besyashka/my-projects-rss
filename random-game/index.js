@@ -1,0 +1,1 @@
+import { wordsHints } from "./assets/js/words-hints.js";
