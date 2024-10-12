@@ -11,6 +11,69 @@ body {
   font-size: 20px;
 }
 
+.container {
+  text-align: center;
+}
+
+.columns-2 {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.wrapper-img {
+  position: relative;
+}
+
+.human {
+  position: absolute;
+}
+
+.human-head {
+  top: 151px;
+  left: 254px;
+}
+
+.human-body {
+  top: 251px;
+  left: 302px;
+}
+
+.human-hand-one {
+  top: 251px;
+  left: 237px;
+}
+
+.human-hand-two {
+  top: 251px;
+  left: 304px;
+}
+
+.human-leg-one {
+  top: 380px;
+  left:239px;
+}
+
+.human-leg-two {
+  top: 380px;
+  left: 301px;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+}
+
+.text {
+  text-align: center;
+  width: 60%;
+  font-size: 30px;
+  font-weight: 600;
+}
+
 .closed-letter {
   font-size: 40px;
   font-weight: 600;
