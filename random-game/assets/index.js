@@ -1,10 +1,13 @@
-import { wordsHints } from "./assets/js/words-hints.js";
+import { wordsHints } from "./js/words-hints.js";
+import { renderModalWindow } from "./js/render-modal-window.js";
 
-const createElement = (tag, className) => {
+export const createElement = (tag, className) => {
   const element =  document.createElement(tag);
   element.classList.add(className);
   return element;
 }
+
+export let remainingAttempts = 6;
 
 const overlay = createElement('div', 'overlay');
 const container = createElement('div', 'container');
@@ -25,8 +28,6 @@ const linkFooterGithub = createElement('a', 'footer-link');
 const imgFooterGithub = createElement('img', 'footer-img');
 const linkFooterRs = createElement('a', 'footer-link');
 const imgFooterRs = createElement('img', 'footer-img');
-
-let remainingAttempts = 6;
 
 title.textContent = 'Game Hangman';
 textAboutGame.textContent = '!Make sure you have the English keyboard layout enabled and capslock disabled';
@@ -129,8 +130,21 @@ const handleClickKeyPress = () => {
       }
     }
 
+    openModalWindow();
     updateAttempts(check);
   });
+}
+
+const openModalWindow = () => {
+  if (arr.join("") === randomWord.word) {
+    overlay.classList.add('active');
+    renderModalWindow();
+  } else if (remainingAttempts === 1) {
+    setTimeout(() => {
+      overlay.classList.add('active');
+      renderModalWindow();
+    }, 1000);
+  }
 }
 
 addWordAndHint();
