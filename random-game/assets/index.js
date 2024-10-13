@@ -1,11 +1,11 @@
-import { wordsHints } from "./js/words-hints.js";
-import { renderModalWindow } from "./js/render-modal-window.js";
+import { wordsHints } from './js/words-hints.js';
+import { renderModalWindow } from './js/render-modal-window.js';
 
 export const createElement = (tag, className) => {
-  const element =  document.createElement(tag);
+  const element = document.createElement(tag);
   element.classList.add(className);
   return element;
-}
+};
 
 export let remainingAttempts = 6;
 
@@ -65,20 +65,25 @@ linkFooterGithub.append(imgFooterGithub);
 footer.append(linkFooterRs);
 linkFooterRs.append(imgFooterRs);
 
-let randomWord = wordsHints[Math.floor(Math.random() * wordsHints.length)]
+let randomWord = wordsHints[Math.floor(Math.random() * wordsHints.length)];
 let arr = [];
 
 const addWordAndHint = () => {
-  const wordLength = randomWord.word.length;
-  for (let i = 0; i < wordLength; i++) {
+  for (let i = 0; i < randomWord.word.length; i++) {
     arr[i] = '_';
   }
 
-  closedLetter.append(arr.join(" "));
+  closedLetter.append(arr.join(' '));
   hint.innerHTML = `hint: ${randomWord.hint}`;
 
   console.log(randomWord.word);
-}
+};
+
+document.addEventListener('keydown', (e) => {
+  const pressKey = e.key;
+
+  handleClickKeyPress(pressKey);
+});
 
 let check = false;
 
@@ -90,12 +95,12 @@ const updateAttempts = (check) => {
     attemptsNum.innerHTML = `${remainingAttempts}/6`;
     renderHumanPart();
   }
-}
+};
 
 const renderHumanPart = () => {
   let element;
   if (remainingAttempts === 5) {
-    element = createElement('img','human-head');
+    element = createElement('img', 'human-head');
     element.src = './assets/img/head.png';
   } else if (remainingAttempts === 4) {
     element = createElement('img', 'human-body');
@@ -116,28 +121,25 @@ const renderHumanPart = () => {
 
   element.classList.add('human');
   return wrapperImgGallows.append(element);
-}
+};
 
-const handleClickKeyPress = () => {
-  document.addEventListener('keydown', (e) => {
-    const pressKey = e.key;
-    check = false;
+const handleClickKeyPress = (pressKey) => {
+  check = false;
 
-    for (let j = 0; j <= randomWord.word.length; j++) {
-      if (randomWord.word[j] === pressKey) {
-        arr[j] = pressKey;
-        closedLetter.innerHTML = arr.join(" ");
-        check = true;
-      }
+  for (let i = 0; i <= randomWord.word.length; i++) {
+    if (randomWord.word[i] === pressKey) {
+      arr[i] = pressKey;
+      closedLetter.innerHTML = arr.join(' ');
+      check = true;
     }
+  }
 
-    openModalWindow();
-    updateAttempts(check);
-  });
-}
+  openModalWindow();
+  updateAttempts(check);
+};
 
 const openModalWindow = () => {
-  if (arr.join("") === randomWord.word) {
+  if (arr.join('') === randomWord.word) {
     overlay.classList.add('active');
     renderModalWindow();
   } else if (remainingAttempts === 1) {
@@ -146,15 +148,18 @@ const openModalWindow = () => {
       renderModalWindow();
     }, 1000);
   }
-}
+};
 
 const renderKeysOnVirtualKeyboard = () => {
-  const keyboardArr = [113, 119, 101, 114, 116, 121, 117, 105, 111, 112, 97, 115, 100, 102, 103, 104, 106, 107, 108, 122, 120, 99, 118, 98, 110, 109];
-  
+  const keyboardArr = [
+    113, 119, 101, 114, 116, 121, 117, 105, 111, 112, 97, 115, 100, 102, 103, 104, 106, 107, 108, 122, 120, 99, 118, 98,
+    110, 109,
+  ];
+
   for (let i = 0; i < keyboardArr.length; i++) {
     const keyElement = createElement('div', 'keyboard-key');
-    
-    keyElement.setAttribute('data-key', keyboardArr[i]);
+
+    keyElement.setAttribute('data', keyboardArr[i]);
     keyElement.textContent = String.fromCharCode(keyboardArr[i]);
     keyboard.appendChild(keyElement);
 
@@ -163,8 +168,42 @@ const renderKeysOnVirtualKeyboard = () => {
       keyboard.appendChild(emptyKeyElement);
     }
   }
-}
+};
+
+const handleVirtualKeyClick = () => {
+  keyboard.addEventListener('click', (e) => {
+    if (e.target.closest('.keyboard-key')) {
+      let check = false;
+
+      for (let i = 0; i <= randomWord.word.length; i++) {
+        if (randomWord.word[i] === e.target.innerText) {
+          arr[i] = e.target.innerText;
+          check = true;
+        }
+      }
+
+      if (e.target.closest('.keyboard-key')) {
+        handleClickKeyPress(e.key);
+      }
+
+      closedLetter.innerHTML = arr.join(' ');
+
+      addClassActiveForKey();
+      openModalWindow();
+      updateAttempts(check);
+    }
+  });
+};
+
+const addClassActiveForKey = () => {
+  document.querySelectorAll('.keyboard .keyboard-key').forEach((key) => {
+    key.addEventListener('click', () => {
+      key.classList.add('key-active');
+    });
+  });
+};
 
 addWordAndHint();
 handleClickKeyPress();
 renderKeysOnVirtualKeyboard();
+handleVirtualKeyClick();

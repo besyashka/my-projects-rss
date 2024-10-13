@@ -118,6 +118,7 @@ body {
   border: 1px solid #eb0826;
   border-radius: 5px;
   background-color: #ff749e42;
+  cursor: pointer;
 }
 
 .empty-key {
