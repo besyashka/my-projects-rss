@@ -40,7 +40,7 @@
   justify-content: center;
   width: 60%;
   padding: 6px;
-  background-color: #dfa0e97d;
+  background-color: #897a7cb0;
   border: 1px solid #eb0826;
   border-radius: 10px;
 }
@@ -65,7 +65,7 @@
 
 .active {
   color: #534a4aa4;
-  background: #eb0826;
+  background: #eb08269e;
 }
 
 /* gallows */

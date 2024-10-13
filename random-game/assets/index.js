@@ -57,6 +57,7 @@ columns.append(content);
 content.append(closedLetter);
 content.append(hint);
 content.append(attempts);
+content.append(keyboard);
 attempts.append(attemptsNum);
 footer.append(year);
 footer.append(linkFooterGithub);
@@ -147,5 +148,23 @@ const openModalWindow = () => {
   }
 }
 
+const renderKeysOnVirtualKeyboard = () => {
+  const keyboardArr = [113, 119, 101, 114, 116, 121, 117, 105, 111, 112, 97, 115, 100, 102, 103, 104, 106, 107, 108, 122, 120, 99, 118, 98, 110, 109];
+  
+  for (let i = 0; i < keyboardArr.length; i++) {
+    const keyElement = createElement('div', 'keyboard-key');
+    
+    keyElement.setAttribute('data-key', keyboardArr[i]);
+    keyElement.textContent = String.fromCharCode(keyboardArr[i]);
+    keyboard.appendChild(keyElement);
+
+    if (i === 10 || i === 19) {
+      const emptyKeyElement = createElement('div', 'empty-key');
+      keyboard.appendChild(emptyKeyElement);
+    }
+  }
+}
+
 addWordAndHint();
 handleClickKeyPress();
+renderKeysOnVirtualKeyboard();
