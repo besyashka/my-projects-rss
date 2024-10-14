@@ -207,3 +207,30 @@ addWordAndHint();
 handleClickKeyPress();
 renderKeysOnVirtualKeyboard();
 handleVirtualKeyClick();
+
+/* const resultsTable = winner => {
+  let arr = JSON.parse(localStorage.getItem('users')) || [];
+  let text = '';
+
+  arr.unshift(score);
+
+  for (let prop in arr) {
+    text = text + ' player: ' + arr[prop];
+  }
+
+  p.textContent = text;
+  modalResult.style.display = 'block';
+
+  if(arr.length >= 10) { 
+    arr.pop();
+  }
+
+  localStorage.setItem('users', JSON.stringify(arr));
+  //localStorage.clear()
+}
+
+// Функция для загрузки результатов из localStorage
+function loadResults() {
+  const results = localStorage.getItem('results');
+  return results ? JSON.parse(results) : [];
+} */

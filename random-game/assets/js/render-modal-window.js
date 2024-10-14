@@ -1,5 +1,6 @@
 import { createElement } from '../index.js';
 import { remainingAttempts } from '../index.js';
+import { saveResults, getResults } from '../js/local-storage.js';
 
 export const renderModalWindow = () => {
   const modalContainer = createElement('div', 'modal-container');
@@ -15,11 +16,21 @@ export const renderModalWindow = () => {
   modalContainer.append(title);
   modalContainer.append(list);
 
-  for (let i = 0; i < 10; i++) {
-    const listItem = createElement('li', 'item');
-    listItem.innerHTML = `attempts left unspent: ${remainingAttempts}`;
-    list.append(listItem);
+  const results = getResults();
+
+  results.unshift(remainingAttempts);
+
+  if (results.length > 10) {
+    results.pop();
   }
+
+  saveResults(results);
+
+  results.forEach((result) => {
+    const listItem = createElement('li', 'item');
+    listItem.innerHTML = `attempts left unspent: ${result}`;
+    list.append(listItem);
+  });
 
   button.addEventListener('click', () => {
     modalContainer.remove();
