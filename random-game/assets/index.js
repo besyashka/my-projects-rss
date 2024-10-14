@@ -159,7 +159,7 @@ const renderKeysOnVirtualKeyboard = () => {
   for (let i = 0; i < keyboardArr.length; i++) {
     const keyElement = createElement('div', 'keyboard-key');
 
-    //keyElement.setAttribute('data', keyboardArr[i]);
+    keyElement.setAttribute('data-key', keyboardArr[i]);
     keyElement.textContent = String.fromCharCode(keyboardArr[i]);
     keyboard.appendChild(keyElement);
 

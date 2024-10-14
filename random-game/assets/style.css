@@ -35,8 +35,28 @@ body {
   flex-wrap: wrap;
 }
 
+@keyframes borderImg {
+  0% {
+    border-color: #b41328;
+    box-shadow: 0 0 10px rgb(255, 0, 0);
+  }
+  50% {
+    border-color: #3615ad;
+    box-shadow: 0 0 10px rgb(0, 0, 255);
+  }
+  100% {
+    border-color: #97002d;
+    box-shadow: 0 0 10px rgb(245, 11, 70);
+  }
+}
+
 .wrapper-img {
   position: relative;
+  padding: 6px;
+  margin: 20px 0;
+  border: 2px solid #070707;
+  border-radius: 10px;
+  animation: borderImg 3s infinite;
 }
 
 .human {
@@ -189,37 +209,37 @@ body {
   }
 
   .human-head {
-    top: 181px;
+    top: 75px;
     left: 214px;
     width: 50px;
   }
   
   .human-body {
-    top: 231px;
+    top: 125px;
     left: 239px;
     height: 65px;
   }
   
   .human-hand-one {
-    top: 230px;
+    top: 125px;
     left: 207px;
     height: 41px;
   }
   
   .human-hand-two {
-    top: 230px;
+    top: 125px;
     left: 240px;
     height: 41px;
   }
   
   .human-leg-one {
-    top: 295px;
+    top: 189px;
     left: 207px;
     height: 41px;
   }
   
   .human-leg-two {
-    top: 295px;
+    top: 189px;
     left: 239px;
     height: 41px;
   }
