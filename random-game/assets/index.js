@@ -30,7 +30,7 @@ const linkFooterRs = createElement('a', 'footer-link');
 const imgFooterRs = createElement('img', 'footer-img');
 
 title.textContent = 'Game Hangman';
-textAboutGame.textContent = '!Make sure you have the English keyboard layout enabled and capslock disabled';
+textAboutGame.innerHTML = '!Make sure you have the English keyboard layout enabled and capslock disabled<br/>(!Убедитесь, что у вас включена английская раскладка клавиатуры и отключен капслок!)';
 attempts.textContent = `remaining attempts: `;
 attemptsNum.textContent = `${remainingAttempts}/6`;
 year.textContent = '©2024';
@@ -159,7 +159,7 @@ const renderKeysOnVirtualKeyboard = () => {
   for (let i = 0; i < keyboardArr.length; i++) {
     const keyElement = createElement('div', 'keyboard-key');
 
-    keyElement.setAttribute('data', keyboardArr[i]);
+    //keyElement.setAttribute('data', keyboardArr[i]);
     keyElement.textContent = String.fromCharCode(keyboardArr[i]);
     keyboard.appendChild(keyElement);
 
@@ -207,30 +207,3 @@ addWordAndHint();
 handleClickKeyPress();
 renderKeysOnVirtualKeyboard();
 handleVirtualKeyClick();
-
-/* const resultsTable = winner => {
-  let arr = JSON.parse(localStorage.getItem('users')) || [];
-  let text = '';
-
-  arr.unshift(score);
-
-  for (let prop in arr) {
-    text = text + ' player: ' + arr[prop];
-  }
-
-  p.textContent = text;
-  modalResult.style.display = 'block';
-
-  if(arr.length >= 10) { 
-    arr.pop();
-  }
-
-  localStorage.setItem('users', JSON.stringify(arr));
-  //localStorage.clear()
-}
-
-// Функция для загрузки результатов из localStorage
-function loadResults() {
-  const results = localStorage.getItem('results');
-  return results ? JSON.parse(results) : [];
-} */
