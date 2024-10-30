@@ -1,0 +1,56 @@
+.button {
+  display: block;
+  padding: 15px 45px;
+  @include font("Georgia", serif, 17px, 21.1px);
+  letter-spacing: 1px;
+  color: $color-text-button;
+  background: $color-title-light;
+  border: 2px solid $color-primary;
+  border-radius: 100px;
+  cursor: pointer;
+  transition: all 0.5s ease-out;
+
+  &:hover {
+    background: $color-button-hover;
+    border: 2px solid $color-button-hover;
+  }
+}
+
+.button_control {
+  width: 52px;
+  height: 52px;
+  background: $color-link-light;
+  border: 2px solid $color-primary;
+  border-radius: 100px;
+  cursor: pointer;
+  transition: all 0.3s ease-out;
+
+  &:hover {
+    background: $color-button-hover;
+    border: 0 solid $color-button-hover;
+  }
+
+  &:disabled {
+    border: 2px solid $color-text-light;
+    pointer-events: none;
+  }
+}
+
+.button_colored {
+  background: $color-primary;
+  border: 0px solid $color-primary;
+  transition: all 0.2s ease-out;
+
+  &:hover {
+    background: $color-button-hover;
+    border: 0 solid $color-button-hover;
+  }
+}
+
+.button_modal {
+  align-self: flex-end;
+  font-family: "Arial", sans-serif;
+  font-size: 20px;
+  font-weight: 600;
+  background: transparent;
+}

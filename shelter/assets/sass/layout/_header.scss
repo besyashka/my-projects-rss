@@ -1,0 +1,37 @@
+.header_container {
+  padding: 25px 40px;
+  @include flex($justify: space-between);
+
+  @include media-desktop {
+    padding: 25px 30px;
+  }
+  
+  @include media-mobile {
+    padding: 25px 20px;
+  }
+}
+
+.logo_title {
+  color: $color-additional;
+}
+
+.logo_text {
+  font-size: 13px;
+  line-height: 14.95px;
+  letter-spacing: 1.3px;
+  padding-left: 4px;
+  color: $color-title-light;
+
+  &_dark {
+    color: $color-text-button;
+  }
+}
+
+.header {
+  background: url(../../images/background/noise_transparent.png),
+  radial-gradient(110.67% 538.64% at 5.73% 50%, #513D2F 0%, #1A1A1C 100%);
+
+  &_light {
+    background: $color-title-light;
+  }
+}
