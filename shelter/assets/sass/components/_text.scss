@@ -1,0 +1,11 @@
+.text_xs {
+  width: 380px;
+  font-size: 12px;
+  font-style: italic;
+  line-height: 18px;
+  color: $color-text-donation-xs;
+  @include media-mobile {
+    width: 280px;
+    text-align: justify;
+  }
+}

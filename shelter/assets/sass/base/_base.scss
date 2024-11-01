@@ -1,0 +1,66 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 100vh;
+  padding: 0;
+  @include font("Arial", sans-serif, 15px, 24px);
+}
+
+h1 {
+  @include font("Georgia", serif, 32px, 35.2px);
+  margin: 5px 0;
+  letter-spacing: 2px;
+  color: $color-primary;
+} 
+
+h2 {
+  @include font("Georgia", serif, 44px, 57.2px);
+  padding: 80px 0 0;
+  @include media-mobile {
+    font-size: 25px;
+  }
+  @include media-mobile {
+    line-height: 32.5px;
+    letter-spacing: 1.5px;
+  }
+}
+
+h3 {
+  @include font("Georgia", serif, 35px, 45.5px);
+  letter-spacing: 2.1px;
+  color: $color-additional;
+  @include media-mobile {
+    font-size: 25px;
+    line-height: 32.5px;
+    letter-spacing: 1.5px;
+    text-align: center;
+  }
+}
+
+h4 {
+  @include font("Georgia", serif, 20px, 23px);
+  letter-spacing: 1.1px;
+  color: $color-additional;
+  @include media-mobile {
+    font-size: 15px;
+    letter-spacing: 0.9px;
+  }
+}
+
+h5 {
+  @include font("Georgia", serif, 15px, 16.5px);
+  letter-spacing: 0.9px;
+  @include media-mobile {
+    letter-spacing: 0;
+  }
+}

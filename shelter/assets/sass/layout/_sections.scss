@@ -1,0 +1,6 @@
+.section {
+  padding-bottom: 100px;
+  @include media-mobile {
+    padding-bottom: 42px; 
+  }
+}
