@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Audio player</title>
+  <link rel="stylesheet" href="./assets/style.css">
+</head>
+<body>
+  <header class="header">
+    <h1 class="header_title">Audio player</h1>
+  </header>
+  <main class="container">
+    <div class="player">
+      <div class="player_image">
+        <img class="img" src="./assets/images/track-covers/Bon-Ami.jpg" alt="track-cover">
+      </div>
+      <div class="player_content">
+        <span class="track-current-time">0:00</span>
+        <input class="progress-bar" id="progress-bar" type="range" value="0">
+        <span class="track-duration">0:00</span>
+        <!-- <audio src="./assets/audio/Arsenium_and_Mianna_and_Heren_-_Bon_Ami.mp3"></audio> -->
+        <div class="player_wrapper_button">
+          <button class="player_button_prev button">
+            <img class="player_icon" src="./assets/images/svg/button-prev.svg" alt="button prev">
+          </button>
+          <button class="player_button-play button">
+            <div class="player_icon_play player_icon play"></div>
+          </button>
+          <button class="player_button_next button">
+            <img class="player_icon" src="./assets/images/svg/button-next.svg" alt="button next">
+          </button>
+        </div>
+        <h3 class="author-track">Arsenium Mianna Heren</р>
+        <h4 class="name-track">Bon Ami</h4>
+      </div>
+    </div>
+  </main>
+  <footer class="footer">
+    <a href="https://github.com/besyashka" class="link footer_link" target="_blank">
+      <img class="footer_icon" src="./assets/images/svg/github.svg" alt="icon github">
+      <span class="link-text">Ekaterina</span>
+    </a>
+    <a href="https://rs.school/courses/javascript-ru" class="link" target="_blank">
+      <img class="footer_icon" src="./assets/images/svg/rss-logo.svg" alt="icon rs school" width="130">
+    </a>
+    <span class="link-text">&#169;2024</span>
+  </footer>
+  <script type="module" src="./assets/js/index.js"></script> 
+</body>
+</html>
