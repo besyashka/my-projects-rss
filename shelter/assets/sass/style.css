@@ -764,6 +764,7 @@ h5 {
   justify-content: space-between;
   align-items: center;
   max-width: 990px;
+  overflow: hidden;
 }
 @media (max-width: 1200px) {
   .slider_container {
@@ -778,13 +779,12 @@ h5 {
 
 .slider_line {
   position: relative;
-  left: 0;
   display: flex;
   gap: 90px;
   max-width: 2250px;
   width: 990px;
   height: 435px;
-  overflow: hidden;
+  transition: all 1s;
 }
 @media (max-width: 1200px) {
   .slider_line {
@@ -793,8 +793,6 @@ h5 {
 }
 
 .slide {
-  position: absolute;
-  left: 0;
   display: flex;
   flex-direction: column;
   align-items: center;

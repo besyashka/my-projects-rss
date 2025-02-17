@@ -21,6 +21,7 @@
   justify-content: space-between;
   align-items: center;
   max-width: 990px;
+  overflow: hidden;
 
   @include media-desktop {
     max-width: 580px;
@@ -33,13 +34,12 @@
 
 .slider_line {
   position: relative;
-  left: 0;
   display: flex;
   gap: 90px;
   max-width: 2250px;
   width: 990px;
   height: 435px;
-  overflow: hidden;
+  transition: all 1s;
 
   @include media-desktop {
     gap: 40px;
@@ -47,8 +47,6 @@
 }
 
 .slide {
-  position: absolute;
-  left: 0;
   display: flex;
   flex-direction: column;
   align-items: center;

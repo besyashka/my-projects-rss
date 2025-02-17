@@ -5,7 +5,7 @@ const nav = document.querySelector('.navigation');
 
 export const handleClickBurger = () => {
   burgerButton.addEventListener('click', () => {
-     if (!burgerButton.classList.contains('burger_open')) {
+    if (!burgerButton.classList.contains('burger_open')) {
       openBurgerMenu();
     } else {
       closeBurgerMenu();
@@ -20,7 +20,7 @@ const openBurgerMenu = () => {
   toggleOverlay('add');
 };
 
-const closeBurgerMenu = () => { 
+const closeBurgerMenu = () => {
   burgerButton.classList.remove('burger_open');
   nav.classList.remove('active');
   document.body.style.overflow = '';
@@ -32,8 +32,7 @@ const handleClickNavigation = () => {
     link.addEventListener('click', () => {
       closeBurgerMenu();
     });
-    console.log(link)
-  })
+  });
 };
 
 const handleClickBackground = () => {

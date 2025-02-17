@@ -15,7 +15,7 @@ export const openModalWindow = (cardsArray) => {
       handleClickItem(clickedSliderItem, cardsArray);
     });
   }
-}
+};
 
 const closeModalWindow = (e) => {
   const modalWindow = document.querySelector('.modal_container');
@@ -30,24 +30,24 @@ const closeModalWindow = (e) => {
     document.querySelector('.overlay').style.zIndex = '0';
     document.removeEventListener('click', closeModalWindow);
   }
-}
+};
 
 const handleClickItem = (clickedItem, cardsArray) => {
   if (clickedItem) {
     generateModalWindow(cardsArray, clickedItem);
     toggleOverlay('add');
-    
+
     document.querySelector('.overlay').style.zIndex = '1';
     document.body.style.overflow = 'hidden';
     document.addEventListener('click', closeModalWindow);
   }
-}
+};
 
 const generateModalWindow = (cardsArray, clickedItem) => {
   const namePet = clickedItem.querySelector('.our_friends_text');
-  cardsArray.forEach((item)=> {
-    if (item.name === `${namePet.textContent}`) { 
+  cardsArray.forEach((item) => {
+    if (item.name === `${namePet.textContent}`) {
       item.generatePetsCardForModal();
     }
   });
-}
+};
