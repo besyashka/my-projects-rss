@@ -1,7 +1,7 @@
 console.log('100 баллов');
 import { handleClickBurger } from './burger.js';
 import { Card } from './Card.js';
-import { getArrayCards } from './slider.js';
+import { handleClickButtonSliderNext, handleClickButtonPrev } from './slider.js';
 import { openModalWindow } from './modal-window.js';
 
 const fetchCard = () => {
@@ -24,10 +24,11 @@ const fetchCard = () => {
       new Card(name, img, type, breed, description, age, inoculations, diseases, parasites)
     );
 
-    getArrayCards(cardsArray);
     openModalWindow(cardsArray);
   });
 };
 
 handleClickBurger();
 fetchCard();
+handleClickButtonSliderNext();
+handleClickButtonPrev();
