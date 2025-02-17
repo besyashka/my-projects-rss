@@ -13,7 +13,7 @@ let gap = getSliderGap();
 
 export const handleClickButtonSliderNext = () => {
   document.querySelector('.slider_control_next').addEventListener('click', () => {
-    position += (270 + gap);
+    position += 270 + gap;
 
     if (position > 1980) {
       position = 0;
@@ -25,7 +25,7 @@ export const handleClickButtonSliderNext = () => {
 
 export const handleClickButtonPrev = () => {
   document.querySelector('.slider_control_prev').addEventListener('click', () => {
-    position -= (270 + gap);
+    position -= 270 + gap;
 
     if (position < 0) {
       position = 1890 - gap;
@@ -38,5 +38,4 @@ export const handleClickButtonPrev = () => {
 window.addEventListener('resize', () => {
   gap = getSliderGap();
   sliderLine.style.transform = `translateX(0px)`;
-  console.log(gap)
 });

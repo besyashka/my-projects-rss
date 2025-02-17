@@ -8,14 +8,14 @@ export class Card {
     this.age = age;
     this.inoculations = inoculations;
     this.diseases = diseases;
-    this.parasites = parasites;   
+    this.parasites = parasites;
   }
 
   generateSlideCard() {
     const slide = document.createElement('div');
     const slideContainerImg = document.createElement('div');
-    const slideImg = document.createElement('img');;
-    const SlideText = document.createElement('span')
+    const slideImg = document.createElement('img');
+    const SlideText = document.createElement('span');
     const slideButton = document.createElement('button');
 
     slide.classList.add('slide');
@@ -25,7 +25,7 @@ export class Card {
 
     slideImg.src = this.img;
     slideImg.alt = `pets ${this.type}`;
-    SlideText .textContent = `${this.name}`;
+    SlideText.textContent = `${this.name}`;
     slideButton.textContent = 'Learn more';
 
     slide.appendChild(slideContainerImg);
@@ -41,14 +41,14 @@ export class Card {
       `<span class="text_accent">Age:</span> ${this.age}`,
       `<span class="text_accent">Inoculations:</span> ${this.inoculations}`,
       `<span class="text_accent">Diseases:</span> ${this.diseases}`,
-      `<span class="text_accent">Parasite:</span> ${this.parasites}`
+      `<span class="text_accent">Parasite:</span> ${this.parasites}`,
     ];
 
     const modalWindow = document.createElement('div');
     const modalContainer = document.createElement('div');
-    const buttonClose = document.createElement('button');;
+    const buttonClose = document.createElement('button');
     const img = document.createElement('img');
-    const modalContent = document.createElement('div')
+    const modalContent = document.createElement('div');
     const nameElement = document.createElement('h3');
     const typeElement = document.createElement('h4');
     const descriptionElement = document.createElement('h5');
@@ -70,7 +70,7 @@ export class Card {
     nameElement.textContent = this.name;
     typeElement.textContent = `${this.type} - ${this.breed}`;
     descriptionElement.textContent = this.description;
-    
+
     for (let i = 0; i < listItemsArray.length; i++) {
       const listItem = document.createElement('li');
       listItem.innerHTML = listItemsArray[i];
@@ -87,10 +87,10 @@ export class Card {
     modalContent.appendChild(nameElement);
     modalContent.appendChild(typeElement);
     modalContent.appendChild(descriptionElement);
-    modalContent.appendChild(list);  
+    modalContent.appendChild(list);
 
     document.querySelector('.overlay').appendChild(modalWindow);
-    
+
     return modalWindow;
   }
-};
+}
