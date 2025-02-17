@@ -46,3 +46,11 @@
     border: 0 solid $color-button-hover;
   }
 }
+
+.button_modal {
+  align-self: flex-end;
+  font-family: "Arial", sans-serif;
+  font-size: 20px;
+  font-weight: 600;
+  background: transparent;
+}

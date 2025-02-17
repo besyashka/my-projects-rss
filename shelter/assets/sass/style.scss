@@ -8,6 +8,7 @@
 @import "base/links";
 
 // Layouts
+@import "layout/overlay";
 @import "layout/sections";
 @import "layout/container";
 @import "layout/header";
@@ -27,6 +28,7 @@
 @import "components/slider";
 @import "components/pagination";
 @import "components/text";
+@import "components/modal-window";
 
 // Pages
 @import "pages/pets";

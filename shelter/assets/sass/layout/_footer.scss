@@ -71,9 +71,11 @@
 .footer_img {
   max-height: 310px;
   @include media-mobile {
-    margin-top: 19px;
+    width: 260px;
+    max-height: 296px;
+    margin-top: 12px;
     & > img {
-      width: 260px;
+      width: 100%;
     }
   }
 }
